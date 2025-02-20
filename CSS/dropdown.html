@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            text-align: center;
+            background-color: gray;
+        }
+        li{
+            padding: 10px;
+        }
+        li:hover{
+            background-color: green;
+        }
+        .main li:hover .dropdown{
+            position: absolute;
+            display: block;
+            background-color: gray;
+            margin-left: -10px;
+            margin-top: 10px;
+        }
+        ul{
+            list-style: none;
+        }
+        .dropdown{
+            display: none;
+        }
+        .smain li:hover .dropdown1{
+            position: absolute;
+            display: block;
+            background-color: gray;
+            margin-left: -10px;
+            margin-top: 10px;
+        }
+        .dropdown1{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul class="main">
+        <li>home</li>
+        <li>about</li>
+        <li>course
+            <div class="dropdown">
+                <ul class="smain">
+                    <li>Tally</li>
+                    <li>Ms office</li>
+                    <li>Web Design
+                        <div class="dropdown1">
+                            <ul>
+                                <li>Gaphic Design</li>
+                                <li>UI</li>
+                                <li>UX</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>contact</li>
+    </ul>
+
+</body>
+</html>
