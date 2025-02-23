@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .main {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        text-align: center;
+        background-color: gray;
+    }
+    li {
+        padding: 10px;
+        list-style: none;
+    }
+    li:hover {
+        background-color: green;
+    }
+    .main li:hover .dropdown{
+        position: absolute;
+        display: block;
+        background-color: gray;
+        margin-left: -10px;
+        margin-top: 10px;
+    }
+    .dropdown{
+        display: none;
+    }
+    </style>
+  </head>
+  <body>
+    <ul class="main">
+        <li>Home
+            <div class="dropdown">
+                <ul class="main1">
+                    <li>About</li>
+                    <li>Location</li>
+                </ul>
+            </div>
+        </li>
+        <li>Courses
+            <div class="dropdown">
+                <ul>
+                    <li>Bsc</li>
+                    <li>BTech</li>
+                    <li>BCom</li>
+                </ul>
+            </div>
+        </li>
+        <li>Contact
+            <div class="dropdown">
+                <ul>
+                    <li>Teacher 1</li>
+                    <li>Teacher 2</li>
+                    <li>Teacher 3</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+  </body>
+</html>
