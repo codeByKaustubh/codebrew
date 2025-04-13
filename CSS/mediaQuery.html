@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Query</title>
+  <style>
+
+    *{
+      padding: 0;
+      margin: 0;
+    }
+
+    nav{
+      display: flex;
+    }
+    li{
+      list-style: none;
+    }
+    a{
+      display: grid;
+      padding: 10px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .parent{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+    }
+    .child{
+      padding: 10px;
+      border: 2px solid red;
+    }
+
+
+    @media screen and (max-width:500px){
+      nav{
+        flex-direction: column;
+      }
+      .parent{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media screen and (max-width:300px) {
+        .parent{
+          grid-template-columns: 1fr;
+        }
+    }
+  </style>
+</head>
+<body>
+  
+    <nav>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+    </nav>
+
+    <div class="parent">
+      <div class="child child1">Child 1</div>
+      <div class="child child2">Child 2</div>
+      <div class="child child3">Child 3</div>
+      <div class="child child4">Child 4</div>
+      <div class="child child5">Child 5</div>
+      <div class="child child6">Child 6</div>
+      <div class="child child7">Child 7</div>
+      <div class="child child8">Child 8</div>
+      <div class="child child9">Child 9</div>
+    </div>
+
+</body>
+</html>
