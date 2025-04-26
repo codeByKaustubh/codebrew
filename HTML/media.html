@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>media tags</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Tags</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 32px;
+      background-color: #f9f9f9;
+    }
+
+    img, audio, video {
+      display: block;
+      margin-bottom: 24px;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-    
-    <img src="/assets/pexels-yusif-jalil-18378055.jpg" alt="a stray cat" width="300px"> <br><br>
 
-     <!--  <picture> 
-        <img src="photo.jpeg" width="300px">
-        <img src="pexels-yusif-jalil-18378055.jpg" width="300px">
-    </picture> -->
+  <h1>Media Elements in HTML</h1>
 
-    <audio controls autoplay loop muted>
-        <source src="/assets/@BaileySarian does the ultimate GRWM.mp4">
-        <source src="/assets/Night-Changes(PagalWorld).mp3">
-    </audio>
-<br><br>
-    <video controls autoplay loop muted width="500px">
-        <source src="/assets/@BaileySarian does the ultmate GRWM.mp4">
-        <source src="/assets/Khatu Shyam Bhajan __ Shyama Sang Preet _ Hansraj Raghuwanshi _R Giftrulers _Oye indori _2Directors_.mp4">
-    </video>
+  <!-- Image -->
+  <img src="/assets/pexels-yusif-jalil-18378055.jpg" alt="A stray cat" width="300" />
+
+  <!-- Picture element (uncomment if needed) -->
+  <!--
+  <picture>
+    <source srcset="assets/photo.webp" type="image/webp">
+    <img src="assets/photo.jpeg" alt="Fallback Image" width="300" />
+  </picture>
+  -->
+
+  <!-- Audio -->
+  <audio controls autoplay loop muted>
+    <source src="/assets/Night-Changes(PagalWorld).mp3" type="audio/mp3">
+    <source src="/assets/@BaileySarian does the ultimate GRWM.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Video -->
+  <video controls autoplay loop muted width="500">
+    <source src="/assets/@BaileySarian does the ultimate GRWM.mp4" type="video/mp4">
+    <source src="/assets/Khatu Shyam Bhajan.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
 </body>
 </html>
