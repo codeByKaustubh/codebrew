@@ -1,39 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Display Property</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        *{
-            padding: 0;
-            margin: 0;
-        }
+    body {
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
 
-        p,a,div,span{
-            background: red;
-            height: 100px;
-            padding: 15px;
-        }
+    h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
 
-        a,span{
-            display: inline-block;
-            background: grey;
-            width: 200px;
-        }
+    /* Block elements */
+    p, div {
+      background: red;
+      color: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      height: 100px;
+      display: block;
+    }
 
-        a{
-            display: none;
-        }
+    /* Inline-Block elements */
+    span {
+      display: inline-block;
+      background: grey;
+      color: white;
+      width: 200px;
+      height: 100px;
+      padding: 15px;
+      text-align: center;
+      line-height: 70px; /* Vertically align text */
+      margin-bottom: 10px;
+    }
 
-        /* block inline inline-block none flex grid*/
-    </style>
+    /* Hidden element */
+    a {
+      display: none; /* Hidden */
+      background: blue;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    /* Button to toggle hidden link */
+    .show-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+
+  </style>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, iste! Odit, fugiat. Facere dignissimos asperiores minima, minus nam maxime aperiam delectus, odit laboriosam modi, mollitia cum ratione eum nihil cumque.</p>
-    <span>This is a span tag</span>
-    <a href="#">Link Tag</a>
-    <div>This is a div tag</div>
+
+  <h2>Block Elements</h2>
+  <p>This is a paragraph (Block Element)</p>
+  <div>This is a div (Block Element)</div>
+
+  <h2>Inline-Block Elements</h2>
+  <span>This is a span (Inline-Block)</span>
+
+  <h2>Hidden Element (Click to Show)</h2>
+  <a href="#" id="hiddenLink">Hidden Link</a>
+  <button class="show-link" onclick="showLink()">Show Link</button>
+
+  <script>
+    function showLink() {
+      document.getElementById("hiddenLink").style.display = "inline-block";
+    }
+  </script>
+
 </body>
 </html>
