@@ -5,25 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        img{
-            margin-left: 20%;
-            margin-top: 5%;
-            transition: 1s;
+        /* Styling for the image */
+        img {
+            margin-left: 20%; /* Centers the image horizontally with a margin */
+            margin-top: 5%; /* Adds space at the top of the image */
+            transition: 1s; /* Smooth transition for hover effects */
+            height: 500px;
+            width: 500px;
         }
-        img:hover{
-            /*filter: blur(4px);*/
-            /*filter: brightness(2);*/
-            /*filter: contrast(2);*/
-            /*filter: grayscale(2);*/
-            /*filter: sepia(2);*/
-            /*filter: invert(2);*/
-            /*filter: saturate(2);*/
-            /*filter: hue-rotate(360deg);*/
-            filter: drop-shadow(10px 10px 25px black);
+
+        /* Hover effect on the image */
+        img:hover {
+            /* The following filters are options for different effects on hover: */
+            /* filter: blur(4px); - Applies a blur effect */
+            /* filter: brightness(2); - Increases brightness */
+            /* filter: contrast(2); - Increases contrast */
+            /* filter: grayscale(2); - Converts to grayscale */
+            /* filter: sepia(2); - Applies a sepia filter */
+            /* filter: invert(2); - Inverts colors */
+            /* filter: saturate(2); - Increases saturation */
+            /* filter: hue-rotate(360deg); - Rotates the color hues */
+            
+            /* The selected effect applied here */
+            filter: drop-shadow(10px 10px 25px black); /* Adds a drop shadow effect */
         }
     </style>
 </head>
 <body>
-    <img src="filteer.jpg">
+    <!-- The image with hover effect -->
+    <img src="/assets/pexels-yusif-jalil-18378055.jpg" alt="a stray cat">
 </body>
 </html>
