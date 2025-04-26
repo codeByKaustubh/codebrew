@@ -3,46 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
+    <title>CSS Styling Example</title>
     <style>
-        *{
+        /* Reset default margin and padding */
+        * {
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
         }
-        h2{
-            color: blue;
+
+        /* Styling for the body with background color and font family */
+        body {
+            font-family: 'Rubik Vinyl', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
         }
-    </style>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
-        p{
+
+        /* Main heading styling */
+        h1 {
+            color: #e63946;
+            text-align: center;
+            font-size: 3rem; /* Larger font size */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Secondary heading with blue color */
+        h2 {
+            color: #1d3557;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Small heading with green color */
+        h6 {
+            color: #2a9d8f;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph styling with justified text, text-shadow, and line height */
+        p {
             text-align: justify;
-            /* text-decoration: solid line-through red; */
-            /* line-height: 30px; */
             text-transform: capitalize;
             text-overflow: clip;
-            text-shadow: 5px 5px 5px red , -5px -5px 5px blue;
-            font-family: "Rubik Vinyl", serif;
+            text-shadow: 1px 1px 4px rgba(255, 0, 0, 0.4), -1px -1px 4px rgba(0, 0, 255, 0.4);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
         }
 
-        span{
-            /* font-size: 20px;
-            font-family: sans-serif;
-            font-weight: bold;
-            font-style: italic; */
+        /* Span with bold, italic, and customized font */
+        span {
             font: bold italic 20px "Rubik Vinyl", sans-serif;
+            color: #f1faee;
+            background-color: #1d3557;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
+        /* Hover effect for span */
+        span:hover {
+            background-color: #e63946;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
     </style>
+    <link rel="stylesheet" href="style.css"> <!-- External CSS link -->
 </head>
 <body>
 
-    <h1 style="color: red;">Hello, World!</h1>
+    <h1>Hello, World!</h1>
+
     <h2>Hello, World!</h2>
-    <h6 style="color: green;">Hello, World!</h6>
+
+    <h6>Hello, World!</h6>
+
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora consequuntur quibusdam quidem vero corrupti quos? Voluptas voluptatum nihil nobis suscipit placeat corrupti officiis enim, minus cumque, est facilis iste reiciendis!</p>
+
     <span>This is a span Tag</span>
     
 </body>
-</html> 
+</html>
