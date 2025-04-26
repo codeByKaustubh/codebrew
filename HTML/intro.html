@@ -1,35 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction</title>
-  </head>
-  <body>
-    <p>This is Paragraph</p>
-    <b>Bold</b> <br>
-    <i>Italic</i> <br>
-    <u>Underline</u> <br>
-    <strike>Strike</strike> <br>
-    10<sup>th</sup> <br>
-    H<sub>2</sub>O <br>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Introduction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 32px;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
-    <hr>
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 24px;
+      color: #0056b3;
+    }
 
-    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, reprehenderit.</span> <br>
-    <strong>Strong</strong> <br>
-    <em>Emphasis</em> <br>
-    <ins>Insert</ins> <br>
-    <del>Delete</del> <br>
-    <hr>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6> <hr>
+    hr {
+      margin: 2rem 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
 
-    <marquee> This is a marquee Tag </marquee> <hr>
-    Use <mark><code>div</code></mark> to create a division.
-  </body>
+    mark {
+      background-color: cyan;
+    }
+
+    .example {
+      margin-bottom: 2px;
+    }
+
+    .highlight {
+      padding: 5px;
+      background-color: #f0f0f0;
+      border-left: 4px solid #007bff;
+      border-right: 4px solid #007bff;
+      border-top: 4px solid #007bff;
+      border-bottom: 4px solid #007bff;
+      margin: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Text Formatting Examples</h1>
+
+  <div class="example"><p>This is a paragraph.</p></div>
+  <div class="example"><b>Bold</b></div>
+  <div class="example"><i>Italic</i></div>
+  <div class="example"><u>Underline</u></div>
+  <div class="example"><s>Strikethrough</s></div>
+  <div class="example">10<sup>th</sup></div>
+  <div class="example">H<sub>2</sub>O</div>
+
+  <hr>
+
+  <div class="example"><span>This is a span tag</span></div>
+  <div class="example"><strong>Strong</strong></div>
+  <div class="example"><em>Emphasis</em></div>
+  <div class="example"><ins>Inserted Text</ins></div>
+  <div class="example"><del>Deleted Text</del></div>
+
+  <hr>
+
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+
+  <hr>
+
+  <strong><marquee>This is a scrolling text (Marquee tag)</marquee></strong>
+
+  <hr>
+
+  <div class="highlight">
+    Use <mark>&lt;div&gt;</mark> to create a division in HTML.
+  </div>
+
+</body>
 </html>
