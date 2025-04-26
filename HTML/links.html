@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Links</title>
-  </head>
-  <body>
-    <a href="https://www.google.com" target="_blank">google</a>
-    <a href="intro.html" target="_blank">intro</a>
-    <a href="photo.jpeg" download="humanFace.png" type="png">image</a>
-    <a href="photo.jpeg" target="_parent" >link</a>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Links Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 32px; /* 2rem */
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: block;
+      margin: 10px;
+      text-decoration: none;
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 5px;
+      background-color: #e0e0e0;
+      transition: background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Links Demo</h1>
+
+  <!-- External link -->
+  <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+    Visit Google (opens in new tab)
+  </a>
+
+  <!-- Internal link -->
+  <a href="intro.html" target="_blank">
+    Go to Intro Page (opens in new tab)
+  </a>
+
+  <!-- Download link -->
+  <a href="pexels-yusif-jalil-18378055.jpg" download="cat.png">
+    Download Image (as cat.png)
+  </a>
+
+  <!-- Target parent link -->
+  <a href="pexels-yusif-jalil-18378055.jpg" target="_parent">
+    Open Image in Parent Frame
+  </a>
+
+</body>
 </html>
