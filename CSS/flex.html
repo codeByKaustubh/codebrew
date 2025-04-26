@@ -5,30 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
         }
-        .parent{
+
+        .parent {
             background: grey;
             height: 748px;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            /* flex-wrap: wrap; */
             flex-direction: row;
             align-content: center;
         }
-        .child{
+
+        .child {
             border: 2px solid whitesmoke;
             padding: 10px;
             background-color: antiquewhite;
+            font-size: 2em;
         }
-        .child2{
+
+        .child2 {
             align-self: start;
             margin-top: 50px;
             background-color: black;
-            font-size:xx-large;
+            font-size: xx-large;
+            color: white;
             border-color: black;
         }
     </style>
@@ -36,7 +40,7 @@
 <body>
     <div class="parent">
         <div class="child child1">1</div>
-        <div class="child child2" style="color: white;">2</div>
+        <div class="child child2">2</div>
         <div class="child child3">3</div>
     </div>
 </body>
