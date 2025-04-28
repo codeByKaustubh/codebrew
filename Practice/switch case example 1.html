@@ -10,51 +10,35 @@
     <script>
 
         let day = new Date().getDay();
-        let character = prompt("Enter Character : ")
-        console.log(day)
-
-        switch(character){
-            case "a":{
+        switch(day){
+            case 0:{
                 console.log("Today is Sunday");
                 break;
             }
-            case "e":{
+            case 1:{
                 console.log("Today is Monday");
                 break;
             }
-            case "i":{
+            case 2:{
                 console.log("Today is Tuesday");
                 break;
             }
-            case "o":{
+            case 3:{
                 console.log("Today is Wednesday");
                 break;
             }
-            case "u":{
+            case 4:{
                 console.log("Today is Thrusday");
                 break;
             }
-            case "A":{
+            case 5:{
                 console.log("Today is Friday");
                 break;
             }
-            case "E":{
+            case 6:{
                 console.log("Today is Saturday");
                 break;
             }
-            case "I":{
-                console.log("have a good day");
-                break;
-            }
-            case "O":{
-                console.log("have a break have a kitkat");
-                break;
-            }
-            case "U":{
-                console.log("aaaaaa meri jaaaan");
-                break;
-            }
-           
             default:{
                 console.log("Invalid Input");
                 break;
