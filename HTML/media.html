@@ -7,14 +7,49 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
       padding: 32px;
       background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #444;
+      margin-bottom: 32px;
+    }
+
+    .media-container {
+      max-width: 800px;
+      width: 100%;
+      margin-bottom: 32px;
     }
 
     img, audio, video {
-      display: block;
-      margin-bottom: 24px;
+      width: 100%;
+      max-width: 100%;
       border-radius: 8px;
+      margin-bottom: 24px;
+    }
+
+    audio, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    .media-container > * {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -22,30 +57,23 @@
 
   <h1>Media Elements in HTML</h1>
 
-  <!-- Image -->
-  <img src="/assets/pexels-yusif-jalil-18378055.jpg" alt="A stray cat" width="300" />
+  <div class="media-container">
+    <!-- Image -->
+    <img src="/assets/pexels-yusif-jalil-18378055.jpg" alt="A stray cat sitting on a sidewalk" loading="lazy" />
 
-  <!-- Picture element (uncomment if needed) -->
-  <!--
-  <picture>
-    <source srcset="assets/photo.webp" type="image/webp">
-    <img src="assets/photo.jpeg" alt="Fallback Image" width="300" />
-  </picture>
-  -->
+    <!-- Audio -->
+    <audio controls autoplay loop muted aria-label="Violin music">
+      <source src="/assets/violin-music-64019.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
 
-  <!-- Audio -->
-  <audio controls autoplay loop muted>
-    <source src="/assets/Night-Changes(PagalWorld).mp3" type="audio/mp3">
-    <source src="/assets/@BaileySarian does the ultimate GRWM.mp4" type="audio/mp4">
-    Your browser does not support the audio element.
-  </audio>
+    <!-- Video -->
+    <video controls autoplay loop muted width="100%" aria-label="Scenic landscape video">
+      <source src="/assets/6394054-uhd_4096_2048_24fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <!-- Video -->
-  <video controls autoplay loop muted width="500">
-    <source src="/assets/@BaileySarian does the ultimate GRWM.mp4" type="video/mp4">
-    <source src="/assets/Khatu Shyam Bhajan.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  </div>
 
 </body>
 </html>
