@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Loop</title>
+
+  <script>
+    // ====================================
+    // 1. for Loop
+    // ====================================
+    console.log("1. for Loop:");
+    for (let i = 1; i <= 5; i++) {
+      console.log("Iteration " + i);
+    }
+
+    // ====================================
+    // 2. while Loop
+    // ====================================
+    console.log("\n2. while Loop:");
+    let j = 1;
+    while (j <= 5) {
+      console.log("Iteration " + j);
+      j++;
+    }
+
+    // ====================================
+    // 3. do...while Loop
+    // ====================================
+    console.log("\n3. do...while Loop:");
+    let k = 1;
+    do {
+      console.log("Iteration " + k);
+      k++;
+    } while (k <= 5);
+
+    // ====================================
+    // 4. for...of Loop (for iterating over arrays or iterable objects)
+    // ====================================
+    console.log("\n4. for...of Loop (Array):");
+    const numbers = [10, 20, 30, 40, 50];
+    for (let num of numbers) {
+      console.log(num);
+    }
+  </script>
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+    .cimg{
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Code</h1>
+  <pre>
+    // 1. for Loop
+    for (let i = 1; i <= 5; i++) {
+      console.log("Iteration " + i);
+    }
+
+    // 2. while Loop
+    let j = 1;
+    while (j <= 5) {
+      console.log("Iteration " + j);
+      j++;
+    }
+
+    // 3. do...while Loop
+    let k = 1;
+    do {
+      console.log("Iteration " + k);
+      k++;
+    } while (k <= 5);
+
+    // 4. for...of Loop (for Arrays)
+    const numbers = [10, 20, 30, 40, 50];
+    for (let num of numbers) {
+      console.log(num);
+    }
+  </pre>
+<hr>
+<h1>Console</h1>
+<div class="cimg">
+  <img src="/assets/js3.png" alt="JS">
+</div>
+</body>
+</html>

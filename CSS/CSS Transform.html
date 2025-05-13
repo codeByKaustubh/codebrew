@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Transform Example</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            transition: transform 1s ease-in-out, background-color 0.5s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .box:hover {
+            transform: rotate(180deg) scale(1.5);
+            background-color: #e74c3c;
+        }
+
+        .text {
+            position: absolute;
+            z-index: 1;  /* Keeps the text fixed */
+            color: white;
+            font-size: xx-large;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <div class="box"></div>
+        <div class="text">Hover</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        text-align: center;
+        background-color: gray;
+      }
+      li {
+        padding: 10px;
+      }
+      li:hover {
+        background-color: whitesmoke;
+      }
+      .main li:hover .dropdown {
+        position: absolute;
+        display: block;
+        background-color: gray;
+        margin-left: -10px;
+        margin-top: 10px;
+      }
+      ul {
+        list-style: none;
+      }
+      .dropdown {
+        display: none;
+      }
+      .main1 li:hover .dropdown1 {
+        position: absolute;
+        display: block;
+        background-color: gray;
+        margin-left: -10px;
+        margin-top: 10px;
+      }
+      .dropdown1 {
+        display: none;
+      }
+      .main li:hover .main2 {
+        position: absolute;
+        display: block;
+        background-color: gray;
+        margin-left: -10px;
+        margin-top: 10px;
+      }
+      .main2 {
+        display: none;
+      }
+      .main li:hover .main3 {
+        position: absolute;
+        display: block;
+        background-color: gray;
+        margin-left: -10px;
+        margin-top: 10px;
+      }
+      .main3 {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="main">
+      <li>home</li>
+      <li>
+        about
+        <div class="dropdown2">
+          <ul class="main3">
+            <li>x</li>
+            <li>y</li>
+            <li>z</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        course
+        <div class="dropdown">
+          <ul class="main1">
+            <li>Tally</li>
+            <li>Ms office</li>
+            <li>
+              Web Design
+              <div class="dropdown1">
+                <ul>
+                  <li>Gaphic Design</li>
+                  <li>UI</li>
+                  <li>UX</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        contact
+        <div class="main2">
+          <ul>
+            <li>Teacher 1</li>
+            <li>Teacher 2</li>
+            <li>Teacher 3</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
