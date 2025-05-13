@@ -3,56 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pulsing Button Animation</title>
+  <title>Bouncing Ball Animation</title>
   <style>
     body {
+      margin: 0;
       height: 100vh;
+      background: #e0f7fa;
       display: flex;
       justify-content: center;
-      align-items: center;
-      background: #1e1e2f;
-      margin: 0;
-      font-family: sans-serif;
+      align-items: flex-start;
+      overflow: hidden;
     }
 
-    .glow-btn {
-      padding: 16px 32px;
-      font-size: 1.2rem;
-      color: white;
-      background-color: #6200ea;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 0 15px #6200ea;
-      animation: pulse 1.5s infinite ease-in-out;
-      transition: transform 0.2s ease;
+    .ball {
+      width: 60px;
+      height: 60px;
+      background-color: #ff6f00;
+      border-radius: 50%;
+      position: relative;
+      animation: bounce 2s infinite ease-in-out;
     }
 
-    .glow-btn:hover {
-      transform: scale(1.05);
-    }
-
-    @keyframes pulse {
+    @keyframes bounce {
       0% {
-        box-shadow: 0 0 10px #6200ea;
-        transform: scale(1);
+        top: 0;
+        animation-timing-function: ease-in;
       }
       50% {
-        box-shadow: 0 0 30px #9c47ff;
-        transform: scale(1.1);
+        top: 300px;
+        animation-timing-function: ease-out;
       }
       100% {
-        box-shadow: 0 0 10px #6200ea;
-        transform: scale(1);
+        top: 0;
       }
     }
   </style>
 </head>
 <body>
-
-    <a href="intro.html">
-        <button class="glow-btn">Go to Introduction</button>
-    </a>
-
+  <div class="ball"></div>
 </body>
 </html>
