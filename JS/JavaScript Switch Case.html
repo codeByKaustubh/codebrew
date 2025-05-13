@@ -5,6 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JavaScript Switch Case</title>
 
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #444;
+      margin-top: 20px;
+    }
+
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      overflow-x: auto;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    hr {
+      max-width: 900px;
+      margin: 40px auto;
+      border: 1px solid #ccc;
+    }
+
+    .cimg {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .cimg img {
+      max-width: 90%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .cimg img:hover {
+      transform: scale(1.02);
+    }
+  </style>
+
   <script>
     let dayNumber = 3;
     let dayName;
@@ -37,57 +88,50 @@
 
     console.log("Day:", dayName);
   </script>
-
-  <style>
-    h1 {
-      text-align: center;
-    }
-    .cimg{
-        display: flex;
-        justify-content: center;
-    }
-  </style>
 </head>
+
 <body>
 
-<h1>Code</h1>
-<pre>
-    let dayNumber = 3;
-    let dayName;
-    
-    switch (dayNumber) {
-      case 1:
-        dayName = "Monday";
-        break;
-      case 2:
-        dayName = "Tuesday";
-        break;
-      case 3:
-        dayName = "Wednesday";
-        break;
-      case 4:
-        dayName = "Thursday";
-        break;
-      case 5:
-        dayName = "Friday";
-        break;
-      case 6:
-        dayName = "Saturday";
-        break;
-      case 7:
-        dayName = "Sunday";
-        break;
-      default:
-        dayName = "Invalid day number";
-    }
-    
-    console.log("Day:", dayName);
-</pre>
-<hr>
+  <h1>JavaScript Switch Case</h1>
+
+  <pre>
+let dayNumber = 3;
+let dayName;
+
+switch (dayNumber) {
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  case 7:
+    dayName = "Sunday";
+    break;
+  default:
+    dayName = "Invalid day number";
+}
+
+console.log("Day:", dayName);
+  </pre>
+
+  <hr>
 
   <h1>Console</h1>
   <div class="cimg">
-    <img src="/assets/js4.png" alt="JS">
+    <img src="/assets/js4.png" alt="JavaScript Switch Console Output">
   </div>
 
 </body>

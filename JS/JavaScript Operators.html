@@ -5,85 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JavaScript Operators</title>
 
-  <script>
-    // Arithmetic Operators (+, -, *, /, %, **)
-    let num1 = 10, num2 = 5;
-
-    console.log("Arithmetic Operators:");
-    console.log("Addition (num1 + num2):", num1 + num2);       // 15
-    console.log("Subtraction (num1 - num2):", num1 - num2);    // 5
-    console.log("Multiplication (num1 * num2):", num1 * num2); // 50
-    console.log("Division (num1 / num2):", num1 / num2);       // 2
-    console.log("Modulus (num1 % num2):", num1 % num2);        // 0
-    console.log("Exponentiation (num1 ** num2):", num1 ** num2); // 100000
-
-    // Assignment Operators (+=, -=, *=, /=)
-    let a = 10;
-    a += 5;  // a = 15
-    a -= 3;  // a = 12
-
-    console.log("\nAssignment Operators:");
-    console.log("a after a += 5:", a); // 15
-    console.log("a after a -= 3:", a); // 12
-
-    // Comparison Operators (>, <, ==, ===, !=)
-    console.log("\nComparison Operators:");
-    console.log("a > num2:", a > num2);           // true
-    console.log("a == '12':", a == '12');         // true (loose equality)
-    console.log("a === '12':", a === '12');       // false (strict equality)
-    console.log("a != 10:", a != 10);             // true
-
-    // Logical Operators (&&, ||, !)
-    console.log("\nLogical Operators:");
-    console.log("AND (a > num2 && num2 == 5):", a > num2 && num2 == 5); // true
-    console.log("OR (a > num2 || num2 == 15):", a > num2 || num2 == 15); // true
-    console.log("NOT !(a > num2 && num2 == 5):", !(a > num2 && num2 == 5)); // false
-  </script>
-
   <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
     h1 {
       text-align: center;
+      color: #444;
     }
-    .cimg{
-        display: flex;
-        justify-content: center;
+
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      font-size: 1rem;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    hr {
+      max-width: 900px;
+      margin: 40px auto;
+      border: 1px solid #ccc;
+    }
+
+    .cimg {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .cimg img {
+      max-width: 90%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
   </style>
-</head>
-<body>
 
-  <h1>Code</h1>
-
-  <pre>
-    // Arithmetic Operators (+, -, *, /, %, **)
-    console.log("Addition:", num1 + num2);
-    console.log("Subtraction:", num1 - num2);
-    console.log("Multiplication:", num1 * num2);
-    console.log("Division:", num1 / num2);
-    console.log("Modulus:", num1 % num2);
-    console.log("Exponentiation:", num1 ** num2);
+  <script>
+    // Arithmetic Operators
+    let num1 = 10, num2 = 5;
+    console.log("Arithmetic Operators:");
+    console.log("Addition (num1 + num2):", num1 + num2);
+    console.log("Subtraction (num1 - num2):", num1 - num2);
+    console.log("Multiplication (num1 * num2):", num1 * num2);
+    console.log("Division (num1 / num2):", num1 / num2);
+    console.log("Modulus (num1 % num2):", num1 % num2);
+    console.log("Exponentiation (num1 ** num2):", num1 ** num2);
 
     // Assignment Operators
+    let a = 10;
     a += 5;
     a -= 3;
-    console.log(a);
+
+    console.log("\nAssignment Operators:");
+    console.log("After a += 5:", a);
+    console.log("After a -= 3:", a);
 
     // Comparison Operators
-    console.log(a > num2);
-    console.log(a == '12');
-    console.log(a === '12');
-    console.log(a != 10);
+    console.log("\nComparison Operators:");
+    console.log("a > num2:", a > num2);
+    console.log("a == '12':", a == '12');   // Loose equality
+    console.log("a === '12':", a === '12'); // Strict equality
+    console.log("a != 10:", a != 10);
 
     // Logical Operators
-    console.log(a > num2 && num2 == 5);
-    console.log(a > num2 || num2 == 15);
-    console.log(!(a > num2 && num2 == 5));
-  </pre>
-<hr>
-<h1>Console</h1>
-  <div class="cimg">
-    <img src="/assets/js2.png" alt="">
-  </div>
+    console.log("\nLogical Operators:");
+    console.log("AND (a > num2 && num2 == 5):", a > num2 && num2 == 5);
+    console.log("OR (a > num2 || num2 == 15):", a > num2 || num2 == 15);
+    console.log("NOT !(a > num2 && num2 == 5):", !(a > num2 && num2 == 5));
+  </script>
+</head>
 
+<body>
+  <h1>JavaScript Operators</h1>
+
+  <pre>
+// Arithmetic Operators
+console.log("Addition:", num1 + num2);
+console.log("Subtraction:", num1 - num2);
+console.log("Multiplication:", num1 * num2);
+console.log("Division:", num1 / num2);
+console.log("Modulus:", num1 % num2);
+console.log("Exponentiation:", num1 ** num2);
+
+// Assignment Operators
+a += 5;
+a -= 3;
+console.log("Updated a:", a);
+
+// Comparison Operators
+console.log(a > num2);
+console.log(a == '12');
+console.log(a === '12');
+console.log(a != 10);
+
+// Logical Operators
+console.log(a > num2 && num2 == 5);
+console.log(a > num2 || num2 == 15);
+console.log(!(a > num2 && num2 == 5));
+  </pre>
+
+  <hr>
+
+  <h1>Console Output</h1>
+  <div class="cimg">
+    <img src="/assets/js2.png" alt="JavaScript Operator Console Output">
+  </div>
 </body>
 </html>

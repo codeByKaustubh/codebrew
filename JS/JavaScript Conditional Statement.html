@@ -1,75 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Conditional Statements</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Conditional Statements</title>
 
-    <script>
-      //  conditional statement
-      console.log("ELSE IF EXAMPLE")
-      let n1 = 10,
-        n2 = 5;
-      if (n1 > n2) {
-        console.log("N1 is greater than N2");
-      } else if (n2 > n1) {
-        console.log("N2 is greater than N1");
-      } else {
-        console.log("Both are Equal");
-      }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
 
-      console.log("IF ELSE EXAMPLE")
-      let age = 16;
-      if(age > 18) console.log("Eligible to vote")
-      else console.log("Not Eligible to vote")
-      
-      console.log("IF EXAMPLE")
-      let a = 7;
-      if (a = 7) {
-        console.log("Good Morning")
-      }
-    </script>
+    h1 {
+      text-align: center;
+      color: #333;
+    }
 
-    <style>
-      h1{
-        text-align: center;
-      }
-      .cimg{
-        display: flex;
-        justify-content: center;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Code</h1>
-    <pre>
-      //  conditional statement
-      console.log("ELSE IF EXAMPLE")
-      let n1 = 10,
-        n2 = 5;
-      if (n1 > n2) {
-        console.log("N1 is greater than N2");
-      } else if (n2 > n1) {
-        console.log("N2 is greater than N1");
-      } else {
-        console.log("Both are Equal");
-      }
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow-x: auto;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
 
-      console.log("IF ELSE EXAMPLE")
-      let age = 16;
-      if(age > 18) console.log("Eligible to vote")
-      else console.log("Not Eligible to vote")
-      
-      console.log("IF EXAMPLE")
-      let a = 7;
-      if (a = 7) {
-        console.log("Good Morning")
-      }
-    </pre>
-    <hr>
-    <h1>Console</h1>
-    <div class="cimg">
-      <img src="/assets/js5.png" alt="JS">
-    </div>
-  </body>
+    .cimg {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .cimg img {
+      max-width: 90%;
+      height: auto;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    hr {
+      max-width: 800px;
+      margin: 40px auto;
+      border: 1px solid #ccc;
+    }
+  </style>
+
+  <script>
+    //  conditional statement
+    console.log("ELSE IF EXAMPLE");
+    let n1 = 10, n2 = 5;
+    if (n1 > n2) {
+      console.log("N1 is greater than N2");
+    } else if (n2 > n1) {
+      console.log("N2 is greater than N1");
+    } else {
+      console.log("Both are Equal");
+    }
+
+    console.log("IF ELSE EXAMPLE");
+    let age = 16;
+    if (age > 18) {
+      console.log("Eligible to vote");
+    } else {
+      console.log("Not Eligible to vote");
+    }
+
+    console.log("IF EXAMPLE");
+    let a = 7;
+    if (a === 7) {
+      console.log("Good Morning");
+    }
+  </script>
+</head>
+<body>
+  <h1>Code</h1>
+  <pre>
+//  conditional statement
+console.log("ELSE IF EXAMPLE");
+let n1 = 10, n2 = 5;
+if (n1 > n2) {
+  console.log("N1 is greater than N2");
+} else if (n2 > n1) {
+  console.log("N2 is greater than N1");
+} else {
+  console.log("Both are Equal");
+}
+
+console.log("IF ELSE EXAMPLE");
+let age = 16;
+if (age > 18) {
+  console.log("Eligible to vote");
+} else {
+  console.log("Not Eligible to vote");
+}
+
+console.log("IF EXAMPLE");
+let a = 7;
+if (a === 7) {
+  console.log("Good Morning");
+}
+  </pre>
+
+  <hr>
+
+  <h1>Console</h1>
+  <div class="cimg">
+    <img src="/assets/js5.png" alt="JS Output">
+  </div>
+</body>
 </html>
