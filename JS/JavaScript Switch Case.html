@@ -61,6 +61,9 @@
     let dayName;
 
     switch (dayNumber) {
+      case 0:
+        dayName = "Sunday";
+        break;
       case 1:
         dayName = "Monday";
         break;
@@ -78,9 +81,6 @@
         break;
       case 6:
         dayName = "Saturday";
-        break;
-      case 7:
-        dayName = "Sunday";
         break;
       default:
         dayName = "Invalid day number";
