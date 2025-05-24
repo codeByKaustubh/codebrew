@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrays</title>
-</head>
-<body>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Operators</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #444;
+    }
+
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      font-size: 1rem;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    hr {
+      max-width: 900px;
+      margin: 40px auto;
+      border: 1px solid #ccc;
+    }
+
+    .cimg {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .cimg img {
+      max-width: 90%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+
     <script>
 
         let arr = [21,68,78,99,89]
@@ -33,6 +76,40 @@
 
 
     </script>
+</head>
 
+<body>
+  <h1>JavaScript Operators</h1>
+
+  <pre>
+        let arr = [21,68,78,99,89]
+        let names = ["prasad","sahil","rahul","jay","vivek"]
+
+        console.log(names)
+
+        // add
+        names.push("kaustubh")
+        names.unshift("pritesh")
+        names.splice(2,0,"sarthak")
+        console.log(names)
+
+        // remove 
+        names.pop()
+        names.shift()
+        names.splice(1,1)
+        console.log(names)
+
+        // update 
+        names[0] = "kartik"
+
+        console.log(names)
+  </pre>
+
+  <hr>
+
+  <h1>Console Output</h1>
+  <div class="cimg">
+    <img src="/assets/js2.png" alt="JavaScript Operator Console Output">
+  </div>
 </body>
 </html>
