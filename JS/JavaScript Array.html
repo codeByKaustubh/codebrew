@@ -3,106 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JavaScript Operators</title>
+  <title>JavaScript Array</title>
 
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px;
       color: #333;
     }
 
     h1 {
       text-align: center;
-      color: #444;
+      color: #2c3e50;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     pre {
-      background-color: #272822;
-      color: #f8f8f2;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 900px;
-      margin: 20px auto;
+      background-color: #1e1e2f;
+      color: #d4d4d4;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 1000px;
+      margin: 25px auto;
       font-size: 1rem;
       overflow-x: auto;
-      line-height: 1.6;
+      line-height: 1.7;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    pre:hover {
+      transform: scale(1.01);
     }
 
     hr {
-      max-width: 900px;
-      margin: 40px auto;
-      border: 1px solid #ccc;
+      max-width: 80%;
+      margin: 50px auto;
+      border: none;
+      border-top: 2px solid #ccc;
     }
 
     .cimg {
       display: flex;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .cimg img {
       max-width: 90%;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cimg img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      pre {
+        font-size: 0.9rem;
+        padding: 20px;
+      }
     }
   </style>
 
-    <script>
+  <script>
+    // Array Initialization
+    let arr = [21, 68, 78, 99, 89];
+    let names = ["prasad", "sahil", "rahul", "jay", "vivek"];
 
-        let arr = [21,68,78,99,89]
-        let names = ["prasad","sahil","rahul","jay","vivek"]
+    console.log("Initial Names:", names);
 
-        console.log(names)
+    // Add Elements
+    names.push("kaustubh");
+    names.unshift("pritesh");
+    names.splice(2, 0, "sarthak");
 
-        // add
-        names.push("kaustubh")
-        names.unshift("pritesh")
-        names.splice(2,0,"sarthak")
-        console.log(names)
+    console.log("After Additions:", names);
 
-        // remove 
-        names.pop()
-        names.shift()
-        names.splice(1,1)
-        console.log(names)
+    // Remove Elements
+    names.pop();
+    names.shift();
+    names.splice(1, 1);
 
-        // update 
-        names[0] = "kartik"
+    console.log("After Removals:", names);
 
-        console.log(names)
+    // Update Elements
+    names[0] = "kartik";
 
-
-    </script>
+    console.log("After Update:", names);
+  </script>
 </head>
 
 <body>
   <h1>JavaScript Array</h1>
 
   <pre>
-        let arr = [21,68,78,99,89]
-        let names = ["prasad","sahil","rahul","jay","vivek"]
+let arr = [21, 68, 78, 99, 89];
+let names = ["prasad", "sahil", "rahul", "jay", "vivek"];
 
-        console.log(names)
+console.log("Initial Names:", names);
 
-        // add
-        names.push("kaustubh")
-        names.unshift("pritesh")
-        names.splice(2,0,"sarthak")
-        console.log(names)
+// Add
+names.push("kaustubh");
+names.unshift("pritesh");
+names.splice(2, 0, "sarthak");
 
-        // remove 
-        names.pop()
-        names.shift()
-        names.splice(1,1)
-        console.log(names)
+console.log("After Additions:", names);
 
-        // update 
-        names[0] = "kartik"
+// Remove
+names.pop();
+names.shift();
+names.splice(1, 1);
 
-        console.log(names)
+console.log("After Removals:", names);
+
+// Update
+names[0] = "kartik";
+
+console.log("After Update:", names);
   </pre>
 
   <hr>
