@@ -3,77 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JavaScript Array</title>
+  <title>JavaScript Array Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #eef2f3;
+      color: #2c3e50;
       padding: 40px 20px;
-      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
 
     h1 {
+      font-size: 2rem;
       text-align: center;
-      color: #2c3e50;
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+
+    .section-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-top: 50px;
+      margin-bottom: 15px;
+      color: #2980b9;
     }
 
     pre {
-      background-color: #1e1e2f;
-      color: #d4d4d4;
-      padding: 25px;
-      border-radius: 12px;
-      max-width: 1000px;
-      margin: 25px auto;
+      background: #282c34;
+      color: #dcdcdc;
+      padding: 20px;
+      border-radius: 10px;
       font-size: 1rem;
+      line-height: 1.6;
       overflow-x: auto;
-      line-height: 1.7;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
-    pre:hover {
-      transform: scale(1.01);
-    }
-
-    hr {
-      max-width: 80%;
-      margin: 50px auto;
-      border: none;
-      border-top: 2px solid #ccc;
-    }
-
-    .cimg {
+    .img-container {
       display: flex;
       justify-content: center;
       margin-top: 30px;
     }
 
-    .cimg img {
+    .img-container img {
       max-width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
     }
 
-    .cimg img:hover {
-      transform: scale(1.02);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    .img-container img:hover {
+      transform: scale(1.03);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       h1 {
         font-size: 1.6rem;
       }
 
       pre {
         font-size: 0.9rem;
-        padding: 20px;
       }
     }
   </style>
@@ -107,9 +119,11 @@
 </head>
 
 <body>
-  <h1>JavaScript Array</h1>
+  <div class="container">
+    <h1>JavaScript Array Operations</h1>
 
-  <pre>
+    <div class="section-title">Code</div>
+    <pre>
 let arr = [21, 68, 78, 99, 89];
 let names = ["prasad", "sahil", "rahul", "jay", "vivek"];
 
@@ -133,13 +147,12 @@ console.log("After Removals:", names);
 names[0] = "kartik";
 
 console.log("After Update:", names);
-  </pre>
+    </pre>
 
-  <hr>
-
-  <h1>Console Output</h1>
-  <div class="cimg">
-    <img src="/assets/js6.png" alt="JavaScript Operator Console Output">
+    <div class="section-title">Console Output</div>
+    <div class="img-container">
+      <img src="/assets/js6.png" alt="JavaScript Console Output">
+    </div>
   </div>
 </body>
 </html>
