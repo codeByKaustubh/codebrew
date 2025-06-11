@@ -6,15 +6,31 @@
     <title>Object</title>
     <script>
         let human = {
-            name : "sarthak genda",
+            name : "genda",
             age : 0,
             gender : "unknown",
             isMarried : true,
             iq : "negative"
         }
+        console.log(human)
 
+        //add
+        human["language"] = "hebrew";
         console.log(human);
-        console.table(human)
+        
+        //remove
+        delete human["isMarried"];
+        console.log(human);
+
+        //update
+        human["age"] = 69;
+        console.log(human);
+        
+        //display
+        console.log(human["gender"]);
+        
+
+        console.table(human);
     </script>
 </head>
 <body>
