@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "prasad",
+        age: 21,
+        gender: "male",
+        isMarried: true,
+        subject: ["english", "science", "maths"],
+        marks: { english: 21, maths: 30, science: 55 },
+      };
+
+      console.log(person);
+
+      //add
+      person["language"] = "english";
+      console.log(person);
+
+      // remove
+      delete person["language"];
+      console.log(person);
+
+      // update
+      person["age"] = 22;
+      console.log(person);
+
+      // display
+      console.log(person["age"]);
+
+      //   Object
+      console.log(person.hasOwnProperty('age'));
+      console.log(Object.keys(person));
+      console.log(Object.values(person));
+      console.log(Object.entries(person));
+
+      for (let i = 0; i < Object.entries(person).length; i++) {
+        const element = Object.entries(person)[i];
+        console.log(element[0]);        
+      }
+      
+      console.table(person)
+      
+    </script>
+  </body>
+</html>
