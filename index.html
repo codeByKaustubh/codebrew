@@ -19,6 +19,17 @@
       --pill-radius: 999px;
       --transition: 0.25s cubic-bezier(.4,0,.2,1);
     }
+    body.dark {
+      --bg: #181926;
+      --card-bg: #23243a;
+      --primary: #a5b4fc;
+      --primary-light: #23243a;
+      --secondary: #38bdf8;
+      --secondary-light: #1e293b;
+      --text: #f1f5f9;
+      --muted: #a1a1aa;
+      --shadow: 0 4px 24px 0 rgba(30, 41, 59, 0.18);
+    }
     html, body {
       height: 100%;
     }
@@ -119,6 +130,34 @@
     .card-link:hover span {
       background: var(--secondary-light);
     }
+    .theme-toggle {
+      position: fixed;
+      top: 24px;
+      right: 32px;
+      z-index: 100;
+      background: var(--card-bg);
+      border: none;
+      border-radius: var(--pill-radius);
+      box-shadow: var(--shadow);
+      padding: 8px 18px 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background var(--transition), color var(--transition);
+    }
+    .theme-toggle svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--primary);
+      transition: fill var(--transition);
+    }
+    .theme-toggle:active {
+      transform: scale(0.97);
+    }
     @media (max-width: 600px) {
       .container {
         padding: 0 4px 32px 4px;
@@ -137,11 +176,25 @@
         padding: 16px 0;
         font-size: 1rem;
       }
+      .theme-toggle {
+        top: 12px;
+        right: 8px;
+        padding: 6px 12px 6px 8px;
+        font-size: 0.95rem;
+      }
+      .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+      }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <svg id="themeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#7c3aed" stroke-width="1.5" fill="none"/></svg>
+    <span id="themeLabel">Light</span>
+  </button>
   <div class="container">
     <div class="section">
       <div class="section-title">
@@ -194,5 +247,43 @@
       </ul>
     </div>
   </div>
+  <script>
+    // Theme toggle logic
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    function setTheme(dark) {
+      document.body.classList.toggle('dark', dark);
+      if (dark) {
+        themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/><circle cx="12" cy="12" r="9" fill="none"/>';
+        themeLabel.textContent = 'Dark';
+      } else {
+        themeIcon.innerHTML = '<circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#7c3aed" stroke-width="1.5" fill="none"/>';
+        themeLabel.textContent = 'Light';
+      }
+    }
+    function getStoredTheme() {
+      return localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+    }
+    function storeTheme(theme) {
+      localStorage.setItem('theme', theme);
+    }
+    function applyStoredTheme() {
+      const theme = getStoredTheme();
+      setTheme(theme === 'dark');
+    }
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark');
+      setTheme(isDark);
+      storeTheme(isDark ? 'dark' : 'light');
+    });
+    applyStoredTheme();
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (!localStorage.getItem('theme')) {
+        setTheme(e.matches);
+      }
+    });
+  </script>
 </body>
 </html>
