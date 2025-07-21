@@ -3,31 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Programming Interface</title>
-</head>
-<body>
-    
-    <script>
-        async function getData(){
-           let Response = await fetch('https://dummyjson.com/products?skip=30&limit=0')
-            let data = await Response.json()
-            showData(data)
+    <title>Product Gallery - API Example</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --card-bg: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.1);
         }
 
-        function showData(data){
-            console.log(data)
-            for (let i = 0; i < data.products.length; i++) {
-                const element = data.products[i];
-                document.write(`<h1> ${element.title} </h1>`)
-                document.write(`<img src=${element.images[0]} width="100px"/>`)
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1.title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px var(--shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #64748b;
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .rating-stars {
+            color: #fbbf24;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        .error {
+            text-align: center;
+            padding: 2rem;
+            color: #ef4444;
+            background: #fee2e2;
+            border-radius: 8px;
+            margin: 1rem;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            .products {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .product-card {
+                padding: 1rem;
             }
         }
-        console.log("ABC1")
-        getData()
-        console.log("ABC2")
-        console.log("ABC3")
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Product Gallery</h1>
+        <div id="app"></div>
+    </div>
+    
+    <script>
+        class ProductGallery {
+            constructor(containerId) {
+                this.container = document.getElementById(containerId);
+                this.products = [];
+                this.init();
+            }
 
+            async init() {
+                try {
+                    await this.fetchProducts();
+                } catch (error) {
+                    this.showError(error);
+                }
+            }
+
+            showLoading() {
+                this.container.innerHTML = '<div class="loading">Loading products...</div>';
+            }
+
+            showError(error) {
+                this.container.innerHTML = `
+                    <div class="error">
+                        <h3>Error loading products</h3>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+
+            async fetchProducts() {
+                this.showLoading();
+                try {
+                    const response = await fetch('https://dummyjson.com/products?limit=12');
+                    if (!response.ok) throw new Error('Failed to fetch products');
+                    const data = await response.json();
+                    this.products = data.products;
+                    this.renderProducts();
+                } catch (error) {
+                    throw new Error('Failed to load products. Please try again later.');
+                }
+            }
+
+            generateStars(rating) {
+                const fullStars = Math.floor(rating);
+                const hasHalfStar = rating % 1 >= 0.5;
+                const stars = '★'.repeat(fullStars) + (hasHalfStar ? '½' : '') + '☆'.repeat(5 - fullStars - (hasHalfStar ? 1 : 0));
+                return stars;
+            }
+
+            renderProducts() {
+                if (!this.products.length) {
+                    this.container.innerHTML = '<div class="error">No products found.</div>';
+                    return;
+                }
+
+                const productsHTML = this.products.map(product => `
+                    <article class="product-card">
+                        <img 
+                            src="${product.images[0]}" 
+                            alt="${product.title}"
+                            class="product-image"
+                            onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'"
+                        >
+                        <h2 class="product-title">${product.title}</h2>
+                        <p class="product-description">${product.description}</p>
+                        <p class="product-price">$${product.price.toFixed(2)}</p>
+                        <div class="product-rating">
+                            <span class="rating-stars">${this.generateStars(product.rating)}</span>
+                            <span>${product.rating.toFixed(1)}/5</span>
+                        </div>
+                    </article>
+                `).join('');
+
+                this.container.innerHTML = `<div class="products">${productsHTML}</div>`;
+            }
+        }
+
+        // Initialize the gallery when the DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new ProductGallery('app');
+        });
     </script>
-
 </body>
 </html>
