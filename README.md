@@ -1,5 +1,5 @@
-The link for the index <br>
+1. The link for the index <br>
 https://codebreww.netlify.app/
-<br>
-placeholder image <br>
+<br><br>
+2. placeholder image <br>
 https://placehold.co/
