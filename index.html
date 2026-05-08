@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CodeBrew Index</title>
+  <link rel="icon" type="image/png" href="assets/code.png">
   <style>
     :root {
       --bg: #f4f1ea;
@@ -93,6 +94,9 @@
       text-transform: uppercase;
     }
     h1 {
+      display: flex;
+      align-items: center;
+      gap: 16px;
       font-family: 'Space Grotesk', 'DM Sans', sans-serif;
       font-size: clamp(2.1rem, 4.8vw, 3.7rem);
       line-height: 1.02;
@@ -101,6 +105,18 @@
       max-width: 720px;
       position: relative;
       z-index: 1;
+    }
+    .title-logo {
+      width: clamp(52px, 8vw, 76px);
+      height: clamp(52px, 8vw, 76px);
+      object-fit: contain;
+      flex-shrink: 0;
+      border-radius: 18px;
+      box-shadow: 0 12px 28px rgba(31, 41, 51, 0.16);
+      background: #ffffff;
+    }
+    .title-copy {
+      display: block;
     }
     .hero p {
       margin: 0;
@@ -280,6 +296,12 @@
       }
       h1 {
         font-size: 2rem;
+        gap: 12px;
+      }
+      .title-logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
       }
       .section {
         padding: 18px;
@@ -310,7 +332,10 @@
   <div class="container">
     <section class="hero">
       <div class="eyebrow">CodeBrew Workspace</div>
-      <h1>Clean, simple access to every HTML file in this repo.</h1>
+      <h1>
+        <img class="title-logo" src="assets/code.png" alt="CodeBrew logo" />
+        <span class="title-copy">Clean, simple access to every HTML file in this repo.</span>
+      </h1>
       <p>The layout is trimmed down to feel more like a tidy launchpad: lighter hero, clearer sections, and compact cards that keep the focus on the files themselves.</p>
       <div class="stats">
         <div class="stat-pill">5 sections</div>
