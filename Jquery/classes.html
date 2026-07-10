@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="jquery-4.0.0.min.js"></script>
+     <style>
+        .cyan{
+            color: cyan;
+        }
+     </style>
+</head>
+<body>
+    
+<button class="addbtn">Add class</button>
+<button class="removebtn">remove class</button>
+<button class="togglebtn">toggle class</button>
+
+<div>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolor odio tempora. Doloribus alias debitis quasi quaerat praesentium, dolorem totam dolorum odio repellendus sunt exercitationem odit ex! Dolorem, nulla illum.
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.addbtn').click(function(){
+            $('div').addClass('cyan')
+        })
+        $('.removebtn').click(function(){
+            $('div').removeClass('cyan')
+        })
+        $('.togglebtn').click(function(){
+            $('div').toggleClass('cyan')
+        })
+    })
+</script>
+</body>
+</html>
