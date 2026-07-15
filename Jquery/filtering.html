@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>List 1</li>
+        <li class="red">List 2</li>
+        <li>List 3</li>
+        <li class="green">List 4</li>
+        <li>List 5</li>
+        <li>List 6</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            $("ul li").first().css({color: "blue"});
+            $("ul li").last().css({color: "blue"});
+            $("ul li").eq(2).css({color: "blue"});
+            $("ul li").eq(-2).css({color: "blue"});
+            $("ul li").filter('.red').css({color: "red"});
+            $("ul li").filter('.green').css({color: "green"});
+        });
+    </script>
+</body>
+</html>
