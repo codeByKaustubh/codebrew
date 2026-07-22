@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="jquery-4.0.0.min.js"></script>
+    <title>jQuery Get and Set</title>
+    <script src="../jquery-4.0.0.min.js"></script>
+    <style>
+        body { max-width: 700px; margin: 2rem auto; padding: 0 1rem; font-family: Arial, sans-serif; }
+        input, button { padding: .6rem; font: inherit; }
+        #output { padding: .75rem; background: #f1f5f9; border-radius: .4rem; }
+    </style>
 </head>
 <body>
-    <input type="text" value="user">
-    <p>Lorem ipsum dolor sit amet consectetur <b>adipisicing elit</b>. Cum minus sint aliquam sit expedita ab quia vitae tenetur accusamus rerum dolores reprehenderit illo, in ad, repellendus consectetur nostrum, iste architecto!</p>
+    <h1>jQuery Get and Set</h1>
+    <input id="name" type="text" value="User" aria-label="Name">
+    <p id="message">This paragraph contains <b>bold text</b>.</p>
 
-    <button>click</button>
+    <button id="update" type="button">Update values</button>
+    <pre id="output"></pre>
 
     <script>
-        $(document).ready(function(){
-            console.log($('input').val())
-            console.log($('p').text())
-            console.log($('p').html())            
-            console.log($('input').attr('type'))
+        $(function () {
+            const $name = $('#name');
+            const $message = $('#message');
 
-            $('button').click(function(){
-                $('input').val("krane")
-                $('p').text("<h1>hmm</h1>")
-                $('p').html("<h1>hmm</h1>")
-                $('input').attr("type",'password')
-            })
-        })
+            $('#output').text([
+                `val(): ${$name.val()}`,
+                `text(): ${$message.text()}`,
+                `html(): ${$message.html()}`,
+                `attr('type'): ${$name.attr('type')}`
+            ].join('\n'));
+
+            $('#update').on('click', function () {
+                $name.val('Kaustubh');
+                $message.html('<strong>Values updated with jQuery.</strong>');
+                $name.attr('type', 'password');
+            });
+        });
     </script>
 </body>
 </html>

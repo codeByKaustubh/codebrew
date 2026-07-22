@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="jquery-4.0.0.min.js"></script>
+    <title>jQuery CSS Dimensions</title>
+    <script src="../jquery-4.0.0.min.js"></script>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
+        body {
+            margin: 2rem;
+            font-family: Arial, sans-serif;
         }
-        div{
+        #box {
             width: 300px;
             height: 100px;
-            padding: 5px;
-            margin: 3px;
-            border: 1px solid red;
-            background: grey;
+            padding: 16px;
+            margin: 16px 0;
+            border: 2px solid #dc2626;
+            background: #e5e7eb;
         }
     </style>
 </head>
 <body>
-    <div></div>
-    <button>click</button>
+    <h1>jQuery CSS Dimensions</h1>
+    <div id="box">Click the button to inspect this box.</div>
+    <button id="measure" type="button">Show dimensions</button>
 
     <script>
-        $(document).ready(function(){
-            $('button').click(function(){
-                // $('div').html($('div').width())
-                // $('div').html($('div').height())
-                // $('div').html($('div').innerWidth())    //width and padding
-                // $('div').html($('div').outerWidth())    //width and padding and border
-                // $('div').html($('div').outerWidth(true))    //width and padding and border and margin
-                // $('div').html($('div').innerHeight())    //height and padding 
-                // $('div').html($('div').outerHeight())    //height and padding and border
-                $('div').html($('div').outerHeight(true))    //height and padding and border and margin
-            })
-        })
+        $(function () {
+            $('#measure').on('click', function () {
+                const $box = $('#box');
+                $box.html(`
+                    width: ${$box.width()}px<br>
+                    innerWidth: ${$box.innerWidth()}px<br>
+                    outerWidth: ${$box.outerWidth()}px<br>
+                    outerHeight (with margin): ${$box.outerHeight(true)}px
+                `);
+            });
+        });
     </script>
 </body>
 </html>
