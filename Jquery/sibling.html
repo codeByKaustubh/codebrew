@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Siblings</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    .box { display: inline-block; margin: 5px; padding: 15px; border: 1px solid #000; }
+    .selected { background: #cfe8ff; }
+    .highlight { background: yellow; }
+  </style>
+</head>
+<body>
+  <div id="items">
+    <div class="box stop">Start boundary</div>
+    <div class="box">Box 1</div>
+    <div class="box selected">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box stop">End boundary</div>
+  </div>
+
+  <button id="siblings">siblings()</button>
+  <button id="next">next()</button>
+  <button id="nextAll">nextAll()</button>
+  <button id="nextUntil">nextUntil()</button>
+  <button id="prev">prev()</button>
+  <button id="prevAll">prevAll()</button>
+  <button id="prevUntil">prevUntil()</button>
+
+  <script>
+    $("button").click(function () {
+      $(".box").removeClass("highlight");
+    });
+
+    $("#siblings").click(function () {
+      $(".selected").siblings().addClass("highlight");
+    });
+
+    $("#next").click(function () {
+      $(".selected").next().addClass("highlight");
+    });
+
+    $("#nextAll").click(function () {
+      $(".selected").nextAll().addClass("highlight");
+    });
+
+    $("#nextUntil").click(function () {
+      $(".selected").nextUntil(".stop").addClass("highlight");
+    });
+
+    $("#prev").click(function () {
+      $(".selected").prev().addClass("highlight");
+    });
+
+    $("#prevAll").click(function () {
+      $(".selected").prevAll().addClass("highlight");
+    });
+
+    $("#prevUntil").click(function () {
+      $(".selected").prevUntil(".stop").addClass("highlight");
+    });
+  </script>
+</body>
+</html>
