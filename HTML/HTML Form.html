@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Html Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 600px;
+            min-height: 100vh;
             margin: 0;
         }
 
         form {
-            border: 2px solid black; /* Add border */
-            padding: 20px;
-            background-color: lightgray; /* Optional background color for visibility */
-            text-align: center;
+            width: min(100%, 360px);
+            padding: 24px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, .12);
+        }
+        input {
+            width: 100%;
+            margin-top: 6px;
+            padding: 9px;
+            box-sizing: border-box;
+        }
+        .options input {
+            width: auto;
         }
     </style>
 </head>
 <body>
-    <form action="done.html" method="get">
+    <form action="HTML Form (DONE PG).html" method="get">
         
         <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br><br>
+        <input type="text" id="username" name="username" required><br><br>
         
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+        <input type="email" id="email" name="email" required><br><br>
 
         <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br><br>
+        <input type="password" id="password" name="password" required><br><br>
 
-        <label for="gender">Gender:</label><br>
-        <input type="radio" id="genderM" name="gender">
-        <label for="gender">Male</label>
-        <input type="radio" id="genderF" name="gender">
-        <label for="gender">Female</label>
+        <p>Gender:</p>
+        <div class="options">
+        <input type="radio" id="genderM" name="gender" value="male">
+        <label for="genderM">Male</label>
+        <input type="radio" id="genderF" name="gender" value="female">
+        <label for="genderF">Female</label>
+        </div>
         <br><br>
 
-        <label for="hobby">Hobbies:</label><br>
-        <input type="checkbox" id="hobby1" name="hobby">
+        <p>Hobbies:</p>
+        <div class="options">
+        <input type="checkbox" id="hobby1" name="hobby" value="dancing">
         <label for="hobby1">Dancing</label>
-        <input type="checkbox" id="hobby2" name="hobby">
+        <input type="checkbox" id="hobby2" name="hobby" value="swimming">
         <label for="hobby2">Swimming</label>
-        <input type="checkbox" id="hobby3" name="hobby">
+        <input type="checkbox" id="hobby3" name="hobby" value="reading">
         <label for="hobby3">Reading</label>
-        <br><br>
+        </div><br>
         
         <input type="submit" value="Submit">
     </form>

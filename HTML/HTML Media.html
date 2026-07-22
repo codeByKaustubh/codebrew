@@ -30,7 +30,7 @@
       margin-bottom: 32px;
     }
 
-    img, audio, video {
+    img, video {
       width: 100%;
       max-width: 100%;
       border-radius: 8px;
@@ -58,18 +58,17 @@
   <h1>Media Elements in HTML</h1>
 
   <div class="media-container">
-    <!-- Image -->
-    <img src="/assets/pexels-yusif-jalil-18378055.jpg" alt="A stray cat sitting on a sidewalk" loading="lazy" />
+    <img src="../assets/pexels-yusif-jalil-18378055.jpg" alt="A stray cat sitting on a sidewalk" loading="lazy">
 
     <!-- Audio -->
-    <audio controls autoplay loop muted aria-label="Violin music">
-      <source src="/assets/violin-music-64019.mp3" type="audio/mp3">
+    <audio controls loop aria-label="Violin music">
+      <source src="../assets/violin-music-64019.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
     <!-- Video -->
-    <video controls autoplay loop muted width="100%" aria-label="Scenic landscape video">
-      <source src="/assets/6394054-uhd_4096_2048_24fps.mp4" type="video/mp4">
+    <video controls loop muted playsinline aria-label="Scenic landscape video">
+      <source src="../assets/6394054-uhd_4096_2048_24fps.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 

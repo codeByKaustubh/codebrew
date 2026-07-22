@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jQuery AJAX</title>
     <script src="jquery-4.0.0.min.js"></script>
 </head>
 <body>
-    <button>click me</button>
-    <div></div>
+    <main>
+      <h1>Load content with AJAX</h1>
+      <button id="loadButton" type="button">Load content</button>
+      <div id="result" aria-live="polite"></div>
+    </main>
 
     <script>
-        $(document).ready(function(){
-            $('button').click(function(){
-                $('div').load('ajax.txt')
-            })
-        })
+        $('#loadButton').on('click', function () {
+          $('#result').load('ajax.txt', function (_, status) {
+            if (status === 'error') $('#result').text('Could not load the content.');
+          });
+        });
     </script>
 </body>
 </html>

@@ -14,7 +14,7 @@
 
         /* Styling for the body with background color and font family */
         body {
-            font-family: 'Rubik Vinyl', sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             color: #333;
             line-height: 1.6;
@@ -50,16 +50,16 @@
         /* Paragraph styling with justified text, text-shadow, and line height */
         p {
             text-align: justify;
-            text-transform: capitalize;
-            text-overflow: clip;
-            text-shadow: 1px 1px 4px rgba(255, 0, 0, 0.4), -1px -1px 4px rgba(0, 0, 255, 0.4);
+            max-width: 680px;
+            margin-inline: auto;
             font-size: 1.1rem;
             margin-bottom: 20px;
         }
 
         /* Span with bold, italic, and customized font */
         span {
-            font: bold italic 20px "Rubik Vinyl", sans-serif;
+            display: inline-block;
+            font: bold italic 20px Arial, sans-serif;
             color: #f1faee;
             background-color: #1d3557;
             padding: 5px 10px;
@@ -75,7 +75,6 @@
             transform: scale(1.1);
         }
     </style>
-    <link rel="stylesheet" href="style.css"> <!-- External CSS link -->
 </head>
 <body>
 

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jQuery DOM Methods</title>
     <script src="jquery-4.0.0.min.js"></script>
 </head>
 <body>
-    <ul>
+    <h1>jQuery DOM Methods</h1>
+    <ul id="links">
         <li>link 1</li>
         <li>link 2</li>
         <li>link 3</li>
@@ -24,22 +25,22 @@
     <script>
         $(document).ready(function(){
             $(".appendBtn").click(function(){
-                $("ul").append("<li> APPEND </li>")
+                $("#links").append("<li>Append</li>")
             });
             $(".prependBtn").click(function(){
-                $("ul").prepend("<li> PREPEND </li>")
+                $("#links").prepend("<li>Prepend</li>")
             });
             $(".afterBtn").click(function(){
-                $("ul").after("<li> AFTER </li>")
+                $("#links").after("<p>After the list</p>")
             });
             $(".beforeBtn").click(function(){
-                $("ul").before("<li> BEFORE </li>")
+                $("#links").before("<p>Before the list</p>")
             });
             $(".removeBtn").click(function(){
-                $("ul").remove()
+                $("#links").remove()
             });
             $(".emptyBtn").click(function(){
-                $("ul").empty()
+                $("#links").empty()
             });
         });
     </script>

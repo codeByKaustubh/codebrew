@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jQuery Classes</title>
      <script src="jquery-4.0.0.min.js"></script>
      <style>
-        .cyan{
-            color: cyan;
+        body { font-family: Arial, sans-serif; padding: 2rem; }
+        .cyan {
+            color: #0e7490;
+            background: #cffafe;
+            padding: 1rem;
         }
      </style>
 </head>
 <body>
     
-<button class="addbtn">Add class</button>
-<button class="removebtn">remove class</button>
-<button class="togglebtn">toggle class</button>
+<button class="addbtn" type="button">Add class</button>
+<button class="removebtn" type="button">Remove class</button>
+<button class="togglebtn" type="button">Toggle class</button>
 
-<div>
+<div id="message">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolor odio tempora. Doloribus alias debitis quasi quaerat praesentium, dolorem totam dolorum odio repellendus sunt exercitationem odit ex! Dolorem, nulla illum.
 </div>
 
 <script>
     $(document).ready(function(){
         $('.addbtn').click(function(){
-            $('div').addClass('cyan')
+            $('#message').addClass('cyan')
         })
         $('.removebtn').click(function(){
-            $('div').removeClass('cyan')
+            $('#message').removeClass('cyan')
         })
         $('.togglebtn').click(function(){
-            $('div').toggleClass('cyan')
+            $('#message').toggleClass('cyan')
         })
     })
 </script>

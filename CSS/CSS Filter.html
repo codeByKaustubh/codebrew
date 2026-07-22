@@ -7,11 +7,10 @@
     <style>
         /* Styling for the image */
         img {
-            margin-left: 20%; /* Centers the image horizontally with a margin */
-            margin-top: 5%; /* Adds space at the top of the image */
-            transition: 1s; /* Smooth transition for hover effects */
-            height: 500px;
-            width: 500px;
+            display: block;
+            width: min(90%, 500px);
+            margin: 3rem auto;
+            transition: filter .3s ease;
         }
 
         /* Hover effect on the image */
@@ -27,12 +26,12 @@
             /* filter: hue-rotate(360deg); - Rotates the color hues */
             
             /* The selected effect applied here */
-            filter: drop-shadow(10px 10px 25px black); /* Adds a drop shadow effect */
+            filter: drop-shadow(10px 10px 25px rgba(0, 0, 0, .55));
         }
     </style>
 </head>
 <body>
     <!-- The image with hover effect -->
-    <img src="/assets/pexels-yusif-jalil-18378055.jpg" alt="a stray cat">
+    <img src="../assets/pexels-yusif-jalil-18378055.jpg" alt="A stray cat">
 </body>
 </html>

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jQuery Filtering</title>
     <script src="jquery-4.0.0.min.js"></script>
 </head>
 <body>
-    <ul>
+    <h1>jQuery Filtering</h1>
+    <ul id="items">
         <li>List 1</li>
         <li class="red">List 2</li>
         <li>List 3</li>
@@ -18,12 +19,10 @@
 
     <script>
         $(document).ready(function() {
-            $("ul li").first().css({color: "blue"});
-            $("ul li").last().css({color: "blue"});
-            $("ul li").eq(2).css({color: "blue"});
-            $("ul li").eq(-2).css({color: "blue"});
-            $("ul li").filter('.red').css({color: "red"});
-            $("ul li").filter('.green').css({color: "green"});
+            const $items = $('#items li');
+            $items.first().add($items.last()).add($items.eq(2)).add($items.eq(-2)).css('color', 'blue');
+            $items.filter('.red').css('color', 'red');
+            $items.filter('.green').css('color', 'green');
         });
     </script>
 </body>

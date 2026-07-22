@@ -15,7 +15,7 @@
     <button class="btn btn-primary btn2">Show</button>
     <button class="btn btn-primary btn3">Toggle</button>
 
-    <div>
+    <div id="content">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque ex dolor, minima reprehenderit voluptatum adipisci, praesentium porro sit laudantium, debitis dolore. Perspiciatis asperiores sed pariatur recusandae non. Tempore, in qui?
         Velit odio labore assumenda molestias perferendis nulla mollitia in! Laboriosam, sunt quod, neque quibusdam ratione consequatur ea minus, tempore ad numquam est blanditiis! Modi dicta accusantium suscipit voluptatibus quaerat animi.
         Eligendi minus recusandae assumenda voluptatibus incidunt distinctio est, hic repudiandae beatae quae, expedita iste accusantium consequatur vitae odio fugiat! Doloremque earum deserunt nihil harum maiores nam quod accusantium, rerum iste.
@@ -29,17 +29,17 @@
 
             $('.btn1').click(function(){
                 console.log("Hide Btn clicked");    
-                $('div').hide(2000)
+                $('#content').hide(400)
             })
 
             $('.btn2').click(function(){
                 console.log("Show Btn clicked");    
-                $('div').show(2000)
+                $('#content').show(400)
             })
 
             $('.btn3').click(function(){
                 console.log("Toggle Btn clicked");    
-                $('div').toggle(2000)
+                $('#content').toggle(400)
             })
             
 
