@@ -10,3 +10,6 @@ https://excalidraw.com/
 
 3. gitreverse <br>
 example: youtube.gitreverse.com
+
+
+combobox, label n entry, menubar, messagebox, 
