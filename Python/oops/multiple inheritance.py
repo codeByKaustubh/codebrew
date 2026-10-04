@@ -1,8 +1,8 @@
-class parent1():
+class parent1:
     def p1name(self):
         print("parent1 name")
 
-class parent2():
+class parent2:
     def p2name(self):
         print("parent2 name")
 
